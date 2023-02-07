@@ -15,7 +15,10 @@ class Home extends CI_Controller
     }
     public function index()
 	{
-		$this->load->view('page/home');
+		$data = array();
+		$data['mail'] = $this->session->userdata('mail');
+        $data['content'] = 'page/home';
+		$this->load->view('index',$data);
 	}
     
 }
