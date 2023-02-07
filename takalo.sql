@@ -76,8 +76,8 @@ INSERT INTO produit VALUES
     3,
     1,
     "image4",
-    "REDMI NOTE 12 PRO"
-    "Le Xiaomi 12 Pro, version plus musclée de la famille "Xiaomi 12" annoncée en 2021 est un smartphone haut de gamme muni d'un écran AMOLED de 6,73 pouces rafraîchi à 120 Hz adaptatif et animé par un SoC Qualcomm Snapdragon 8 Gen1 et jusqu'à 12 Go de RAM ainsi que jusqu'à 256 Go de stockage."
+    "REDMI NOTE 12 PRO",
+    "Le Xiaomi 12 Pro, version plus musclée de la famille Xiaomi 12 annoncée en 2021 est un smartphone haut de gamme muni d'un écran AMOLED de 6,73 pouces rafraîchi à 120 Hz adaptatif et animé par un SoC Qualcomm Snapdragon 8 Gen1 et jusqu'à 12 Go de RAM ainsi que jusqu'à 256 Go de stockage."
 );
 INSERT INTO produit VALUES
 (
@@ -137,7 +137,7 @@ INSERT INTO produit VALUES
     3,
     "image10",
     "AIR JORD4",
-    "Cette Air Jordan 4 présente une tige en cuir nubuck blanc. Dans le coloris Air Jordan 4 GS "Hot Lava", des lignes rouges tourbillonnantes accentuent la semelle intermédiaire noire et les ailes du tristement célèbre système de laçage Jordan 4."
+    "Cette Air Jordan 4 présente une tige en cuir nubuck blanc. Dans le coloris Air Jordan 4 GS Hot Lava, des lignes rouges tourbillonnantes accentuent la semelle intermédiaire noire et les ailes du tristement célèbre système de laçage Jordan 4."
 );
 INSERT INTO produit VALUES
 (
