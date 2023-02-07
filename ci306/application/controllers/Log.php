@@ -16,11 +16,17 @@ class Log extends CI_Controller {
 		$this->load->model('Model');
 		if($this->Model->checkLogin($mail,$pwd))
 		{
-			$this->session->set_userdata('mail', $mail);
-			redirect('#');
-		}else{
-			redirect('log/index');
+			redirect('index.php/home/index');
 		}
+		redirect('index.php/log/index');
+		// {
+		// 	$this->session->set_userdata('mail', $mail);
+		// 	redirect('home');
+		// }else{
+		// 	redirect('log/index');
+		// }
+
+		
 	}
 
 	public function logout()

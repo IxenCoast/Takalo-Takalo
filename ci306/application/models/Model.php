@@ -7,6 +7,7 @@
         {   
             $sql = "select * from utilisateur";
             $query = $this->db->query($sql);
+            $row = array();
             $valiny = false;
             foreach($query->result_array() as $row)
             {
@@ -17,5 +18,11 @@
             }
             return $valiny;
         }
+
+        // public function checkLogin($mail,$pass){
+        //     $this -> db -> select('mail, mdp');
+        //     $this -> db -> from('utilisateur');
+        // }
+
     }
 ?>
