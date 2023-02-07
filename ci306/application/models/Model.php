@@ -25,4 +25,15 @@
         // }
 
     }
+
+    public function getproduit($nom , $img)
+    {
+        $sql = "SELECT * FROM Produit";
+        $query = $this->db->query($sql);
+        $result = array()
+        foreach ($nom  as $name) 
+        {
+            echo $name;    
+        }
+    } 
 ?>
