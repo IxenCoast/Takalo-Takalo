@@ -6,6 +6,7 @@
         public function checkLogin($mail,$pass)
         {   
             $sql = "select * from user";
+            $query = $this->db->query($sql);
             $valiny = false;
             foreach($query->result_array() as $row)
             {
