@@ -13,6 +13,12 @@ class Log extends CI_Controller
 		$this->load->view('page/login');
 	}
 
+	public function register()
+	{
+		$this->load->view('page/register');
+	}
+
+
 	public function login()
 	{
 		$mail = $this->input->post("mail");

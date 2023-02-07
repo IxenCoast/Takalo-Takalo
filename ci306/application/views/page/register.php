@@ -11,12 +11,13 @@
     <div id="page">
         <div id="content">
             <form action="<?php echo base_url('index.php/log/login');?>" method="post">
+                <input type="text" placeholder="name" name="name"><br>
                 <input type="email" name="mail" placeholder="Email" ><br>
                 <input type="password" name="pwd" placeholder="Password" >
-                <input type="submit" value="Sign In">
+                <input type="submit" value="Sign up">
             </form>
         </div>
-        <a href="<?php echo base_url('index.php/log/register');?>">Register</a>
+        <a href="<?php echo base_url('index.php/log/index');?>">Retour</a>
     </div>
 </body>
 </html>

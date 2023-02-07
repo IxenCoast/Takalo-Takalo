@@ -19,6 +19,22 @@
             return $valiny;
         }
 
+        public function Register($n,$m, $p)
+        {   
+            $sql = "select * from utilisateur";
+            $query = $this->db->query($sql);
+            $row = array();
+            $valiny = false;
+            foreach($query->result_array() as $row)
+            {
+                if($mail ==  $row['mail'] && $pass ==  $row['mdp'])
+                {
+                    $valiny = true;
+                }
+            }
+            return $valiny;
+        }
+
         // public function checkLogin($mail,$pass){
         //     $this -> db -> select('mail, mdp');
         //     $this -> db -> from('utilisateur');
