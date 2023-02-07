@@ -1,6 +1,6 @@
 <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">ETU</p>
+      <p class="m-0 text-center text-white">ETU002102 | ETU002115 | ETU002133</p>
     </div>
     <!-- /.container -->
   </footer>
