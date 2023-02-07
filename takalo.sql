@@ -2,7 +2,7 @@ drop database takalo;
 create DATABASE takalo;
 use takalo;
 
-CREATE TABLE user(idu int NOT null AUTO_INCREMENT PRIMARY key, mail varchar(255), mdp varchar(255));
+CREATE TABLE user(idu int AUTO_INCREMENT PRIMARY key, mail varchar(255), mdp varchar(255));
 
 create table categorie(idc int primary key not null AUTO_INCREMENT , nom varchar(255));
 
