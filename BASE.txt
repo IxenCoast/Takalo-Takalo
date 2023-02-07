@@ -1,0 +1,9 @@
+Utilsateur
+objet
+date envoi demande
+date acceptation demande
+categorie
+
+Utilisateur 1 -> n objets
+objet 1 -> 1 Utilisateur 1
+
