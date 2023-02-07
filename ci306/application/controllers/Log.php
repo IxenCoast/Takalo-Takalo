@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Log extends CI_Controller {
 
 	public function index()
 	{
@@ -19,13 +19,13 @@ class Welcome extends CI_Controller {
 			$this->session->set_userdata('mail', $mail);
 			redirect('#');
 		}else{
-			redirect('#');
+			redirect('log/index');
 		}
 	}
 
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('#');
+		redirect('log/index');
 	}		
 }
