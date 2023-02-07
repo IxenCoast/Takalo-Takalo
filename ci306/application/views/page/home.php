@@ -3,13 +3,15 @@
 <div class="row">
 
   <div class="col-lg-3">
-  <?php if(isset($mail)){?>
-    <h4 class="my-4"><?php echo $mail;?></h4>
-    <?php } ?>
+ 
+    <h4 class="my-4">Hello <?php echo $mail;?></h4>
+
 
     <div class="list-group">
          <!--list objets -->
-          <a href="#" class="list-group-item"></a>
+          <a href="#" class="list-group-item">1</a>
+          <a href="#" class="list-group-item">2</a>
+          <a href="#" class="list-group-item">3</a>
          <!--/list objets -->
     </div>
 
