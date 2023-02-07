@@ -10,6 +10,7 @@
 <body>
     <div id="page">
         <div id="content">
+            <h3>Login</h3>
             <form action="<?php echo base_url('index.php/log/login');?>" method="post">
                 <input type="email" name="mail" placeholder="Email" ><br>
                 <input type="password" name="pwd" placeholder="Password" >
