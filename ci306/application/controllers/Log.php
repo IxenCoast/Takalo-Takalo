@@ -14,10 +14,20 @@ class Log extends CI_Controller
 	}
 
 	public function register()
-	{
+	{	
 		$this->load->view('page/register');
 	}
 
+	public function signup()
+	{	
+		$n = $this->input->post("name");
+		$m = $this->input->post("mail");
+		$p = $this->input->post("pwd");
+
+		$this->load->model('Model');
+
+		$this->Model->signup($n,$m, $p);
+	}
 
 	public function login()
 	{

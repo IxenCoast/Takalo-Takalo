@@ -19,20 +19,11 @@
             return $valiny;
         }
 
-        public function Register($n,$m, $p)
+        public function signup($n,$m, $p)
         {   
-            $sql = "select * from utilisateur";
-            $query = $this->db->query($sql);
-            $row = array();
-            $valiny = false;
-            foreach($query->result_array() as $row)
-            {
-                if($mail ==  $row['mail'] && $pass ==  $row['mdp'])
-                {
-                    $valiny = true;
-                }
-            }
-            return $valiny;
+            $sql = "insert into utilisateur(idu,nom,mail,mdp) values(null,%s,%s,%s)";
+            $sql = sprintf($sql, $this->db->escape($n), $this->db->escape($m),$this->db->escape($p));
+            $this->db->query($sql);
         }
 
         // public function checkLogin($mail,$pass){
