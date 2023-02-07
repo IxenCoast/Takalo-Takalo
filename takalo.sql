@@ -33,3 +33,5 @@ INSERT INTO categorie VALUES
 
 
 create TABLE produit(idp int PRIMARY key not null, nom varchar(255), idu int, idc int ,img varchar(255), FOREIGN key (idu) REFERENCES user(idu), FOREIGN key (idc) REFERENCES categorie(idc));
+
+INSERT INTO USER VALUE (NULL,'admin','admin@gmail.com','0000');
