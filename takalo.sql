@@ -32,7 +32,7 @@ INSERT INTO categorie VALUES
 );
 
 
-create TABLE produit(idp int PRIMARY key not null AUTO_INCREMENT, nom varchar(255), idu int, idc int ,img varchar(255), FOREIGN key (idu) REFERENCES utilisateur(idu), FOREIGN key (idc) REFERENCES categorie(idc));
+create TABLE produit(idp int PRIMARY key AUTO_INCREMENT, nom varchar(255), idu int, idc int ,img varchar(255), FOREIGN key (idu) REFERENCES utilisateur(idu), FOREIGN key (idc) REFERENCES categorie(idc));
 INSERT INTO produit VALUES
 (
     null,
