@@ -2,7 +2,13 @@ drop database takalo;
 create DATABASE takalo;
 use takalo;
 
-CREATE TABLE utilisateur(idu int AUTO_INCREMENT PRIMARY key, mail varchar(255), mdp varchar(255));
+CREATE TABLE utilisateur(idu int AUTO_INCREMENT PRIMARY key, nom varchar(255), mail varchar(255), mdp varchar(255));
+
+insert into utilisateur values (null, "Admin", "a@r.c", "root");
+insert into utilisateur values (null, "Koto", "konto@r.c", "oui");
+insert into utilisateur values (null, "Bojo", "bojo@r.c", "1234");
+insert into utilisateur values (null, "Tax", "tax@r.c", "0000");
+insert into utilisateur values (null, "Robs", "robs@r.c", "1000");
 
 create table categorie(idc int primary key not null AUTO_INCREMENT , nom varchar(255));
 INSERT INTO categorie VALUES
@@ -159,5 +165,5 @@ INSERT INTO produit VALUES
     "Mazda CX5",
     3,
     5,
-    "image16
+    "image16"
 );
