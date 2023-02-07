@@ -159,5 +159,5 @@ INSERT INTO produit VALUES
     "Mazda CX5",
     3,
     5,
-    "image15"
+    "image16
 );
