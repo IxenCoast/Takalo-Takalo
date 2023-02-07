@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Log extends CI_Controller 
 {
-	public function __construct()
-	{
-		$this->load->model('Model');
-	}
+	// public function __construct()
+	// {
+	// 	
+	// }
 
 	public function index()
 	{
@@ -18,7 +18,7 @@ class Log extends CI_Controller
 		$mail = $this->input->post("mail");
 		$pwd = $this->input->post("pwd");
 
-		
+		$this->load->model('Model');
 		if($this->Model->checkLogin($mail,$pwd))
 		{
 			redirect('index.php/home/index');
@@ -40,11 +40,11 @@ class Log extends CI_Controller
 		redirect('log/index');
 	}
 	
-	public function index($nom , $img)
-	{
-		$nom->$this->post("nom");
-		$image->$this->post("img");
+	// public function index($nom , $img)
+	// {
+	// 	$nom->$this->post("nom");
+	// 	$image->$this->post("img");
 		
 
-	}
+	// }
 }
