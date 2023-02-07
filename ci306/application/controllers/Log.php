@@ -5,7 +5,7 @@ class Log extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('page/#');
+		$this->load->view('page/login');
 	}
 
 	public function login()
