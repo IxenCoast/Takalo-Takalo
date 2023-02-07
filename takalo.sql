@@ -1,3 +1,4 @@
+drop database takalo;
 create DATABASE takalo;
 use takalo;
 
