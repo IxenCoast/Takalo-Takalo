@@ -11,10 +11,10 @@ class Log extends CI_Controller {
 	public function login()
 	{
 		$mail = $this->input->post("mail");
-		$pass = $this->input->post("pwd");
+		$pwd = $this->input->post("pwd");
 
 		$this->load->model('Model');
-		if($this->Model->checkLogin($mail,$pass))
+		if($this->Model->checkLogin($mail,$pwd))
 		{
 			$this->session->set_userdata('mail', $mail);
 			redirect('#');
