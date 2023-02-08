@@ -9,7 +9,7 @@ class Home extends CI_Controller
        
         if(!$this->session->has_userdata('mail'))
 		{
-			 redirect('log/index');  
+			 redirect('index.php/log/index');  
 		}
 		$this->load->model('Model');
     }
