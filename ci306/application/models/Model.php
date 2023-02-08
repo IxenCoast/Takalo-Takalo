@@ -40,6 +40,32 @@
             return $result;
         }
 
+        public function listeProduitAdmin()
+        {   
+            $sql = "SELECT * FROM produit JOIN";
+            $query = $this->db->query($sql);
+            $result = array();
+
+            foreach($query->result_array() as $row)
+            {
+                $result[] = $row;
+            }
+            return $result;
+        }
+
+        public function mesObjets($id)
+        {   
+            $sql = "SELECT * FROM produit JOIN utilisateur on utilisateur.idu = produit.idu where produit.idu =%s";
+            $sql = sprintf($sql, $this->db->escape($id));
+            $query = $this->db->query($sql);
+            $result = array();
+
+            foreach($query->result_array() as $row)
+            {
+                $result[] = $row;
+            }
+            return $result;
+        }
         // public function checkLogin($mail,$pass){
         //     $this -> db -> select('mail, mdp');
         //     $this -> db -> from('utilisateur');
