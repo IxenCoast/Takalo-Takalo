@@ -5,7 +5,7 @@
     $home = "";
     $about = "";
     $contact = "";
-    $service = "";
+    $demandes = "";
     
     if(!isset($header))
     {
@@ -22,8 +22,8 @@
           $about = "active";
         }else if($header == "home"){
           $home = " active";
-        }else if($header == "services"){
-          $service = " active";
+        }else if($header == "demandes"){
+          $demandes = " active";
         }else if($header == "contact"){
           $contact = " active";
         }
@@ -47,7 +47,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Takalo-Takalo</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,11 +63,11 @@
           <li class="nav-item <?php echo $about?>">
                 <a class="nav-link" href="<?php echo $lien?>?content=about">About</a>
           </li>
-          <li class="nav-item<?php echo $service?>">
-            <a class="nav-link" href="<?php echo $lien?>?content=services">Services</a>
+          <li class="nav-item<?php echo $demandes?>">
+            <a class="nav-link" href="<?php echo $lien?>?content=demandes">Demandes</a>
           </li>
           <li class="nav-item<?php echo $contact?>">
-            <a class="nav-link" href="<?php echo base_url('log/logout')?>">Log out</a>
+            <a class="nav-link" href="<?php echo base_url('index.php/log/logout')?>">Log out</a>
           </li>
         </ul>
       </div>

@@ -44,8 +44,9 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-
-    <div class="row">
+    <div class="title"><h1>Vos propositions</h1></div>
+    <br></br>
+    <div class="shadow-lg row">
     <?php foreach ($listeProduit as $produit) {?>
     <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
@@ -58,7 +59,7 @@
                 <p class="card-text"><?php echo $produit['Description']?></p>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <small class="text-muted">By <p class="card-text"><?php echo $produit['nom']?></small>
               </div>
             </div>
           </div>

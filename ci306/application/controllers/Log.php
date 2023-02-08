@@ -27,6 +27,7 @@ class Log extends CI_Controller
 		$this->load->model('Model');
 
 		$this->Model->signup($n,$m, $p);
+		redirect('index.php/home/index');
 	}
 
 	public function login()
@@ -53,7 +54,7 @@ class Log extends CI_Controller
 	public function logout()
 	{
 		$this->session->sess_destroy();
-		redirect('log/index');
+		redirect('index.php/log/index');
 	}
 	
 	// public function index($nom , $img)
