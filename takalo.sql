@@ -4,12 +4,13 @@ use takalo;
 
 CREATE TABLE utilisateur(idu int AUTO_INCREMENT PRIMARY key, nom varchar(255), mail varchar(255), mdp varchar(255));
 
+insert into utilisateur values (null, "Admin", "root@moov.mg", "root");
 insert into utilisateur values (null, "Anja", "anja@moov.mg", "root");
 insert into utilisateur values (null, "Koto", "koto@moov.mg", "oui");
 insert into utilisateur values (null, "Bakoly", "bakoly@moov.mg", "1234");
 insert into utilisateur values (null, "Tanjona", "tanjona@moov.mg", "0000");
 insert into utilisateur values (null, "Robin", "robin@moov.mg", "1000");
-insert into utilisateur values (null, "Admin", "root@moov.mg", "root");
+
 
 create table categorie(idc int primary key not null AUTO_INCREMENT , nom varchar(255));
 

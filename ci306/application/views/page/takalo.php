@@ -18,14 +18,12 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
-          <img class="d-block img-fluid" src="<?php echo base_url();?>assets/img/#.jpg" alt="First slide">
+          <h3>Takalo</h3>        </div>
+        <div class="carousel-item">
+          <h3>Echange</h3>
         </div>
         <div class="carousel-item">
-          <img class="d-block img-fluid" src="<?php echo base_url();?>assets/img/#.jpg" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block img-fluid" src="<?php echo base_url();?>assets/img/#.jpg" alt="Third slide">
-        </div>
+          <h3>Exchange</h3>        </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -47,7 +45,7 @@
                 <h4 class="card-title">
                   <a href="#"><?php echo $produit['title']?></a>
                 </h4>
-                <h5>$24.99</h5>
+                <h5><?php echo $produit['prix']?> Ar</h5>
                 <p class="card-text"><?php echo $produit['Description']?></p>
                 <p class="card-text"><small>By <?php echo $produit['nom']?></small></p>
               </div>

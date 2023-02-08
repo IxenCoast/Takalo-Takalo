@@ -3,14 +3,14 @@
     <?php 
     
     $home = "";
-    $about = "";
+    $ajouter = "";
     $contact = "";
     $demandes = "";
     
         $title = $header;
 
-        if($header == "about"){
-          $about = "active";
+        if($header == "ajouter"){
+          $ajouter = "active";
         }else if($header == "home"){
           $home = " active";
         }else if($header == "demandes"){
@@ -50,8 +50,8 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item <?php echo $about?>">
-                <a class="nav-link" href="">About</a>
+          <li class="nav-item <?php echo $ajouter?>">
+                <a class="nav-link" href="ajouter">Ajouter</a>
           </li>
           <li class="nav-item<?php echo $demandes?>">
             <a class="nav-link" href="demandes">Demandes</a>

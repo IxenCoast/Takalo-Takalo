@@ -38,6 +38,17 @@ class Home extends CI_Controller
         $data['content'] = 'page/demandes';
 		$this->load->view('index',$data);
 	}
+	
+	public function ajouter()
+	{	
+		$data = array();
+		$data['header']="ajout";
+		$data['mail'] = $this->session->userdata('mail');
+		$data['nom'] = $this->session->userdata('nom');
+		$data['idu'] = $this->session->userdata('idu');
+        $data['content'] = 'page/ajouter';
+		$this->load->view('index',$data);
+	}
 
 	public function echange()
 	{	

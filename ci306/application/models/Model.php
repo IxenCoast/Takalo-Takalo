@@ -83,14 +83,21 @@
             $this->db->query($sql);
         }
 
+        public function ins($nom,$idu, $title, $desc, $prix)
+        {   
+            $sql = "insert into produit values(null,%s,%s,null,null,%s,%s,%s)";
+            $sql = sprintf($sql, $this->db->escape($nom), $this->db->escape($idu), $this->db->escape($title), $this->db->escape($desc), $this->db->escape($prix));
+            $this->db->query($sql);
+        }
+
         public function accepter($idd, $idu, $idf, $idp, $idpf)
         {   
             $sql = "update demande set dta=now() where idd=%s";
             $sql = sprintf($sql, $this->db->escape($idd));
             $sql1 = "update produit set idu=%s where idp=%s";
-            $sql1 = sprintf($sql, $this->db->escape($idf),$this->db->escape($idp) );
+            $sql1 = sprintf($sql1, $this->db->escape($idf),$this->db->escape($idp) );
             $sql2 = "update produit set idu=%s where idp=%s";
-            $sql2 = sprintf($sql, $this->db->escape($idu),$this->db->escape($idpf) );
+            $sql2 = sprintf($sql2, $this->db->escape($idu),$this->db->escape($idpf) );
             $this->db->query($sql);
             $this->db->query($sql1);
             $this->db->query($sql2);
@@ -147,7 +154,7 @@
 
         public function getIdAsk($id)
         {   
-            $sql = "select idu from produit where idp in (SELECT demande.idp FROM demande join produit on demande.idpf = produit.idp where dta is null and dtr is null and produit.idu=2)";
+            $sql = "select idu from produit where idp in (SELECT demande.idp FROM demande join produit on demande.idpf = produit.idp where dta is null and dtr is null and produit.idu=%s)";
             $sql = sprintf($sql, $this->db->escape($id));
             $query = $this->db->query($sql);
             $result = array();

@@ -14,6 +14,21 @@ class Demande extends CI_Controller
 		redirect('index.php/home/index');
 	} 
 
+	public function add()
+	{	
+		$nom = $this->input->get("nom");
+		$prix = $this->input->get("prix");
+		$title = $this->input->get("title");
+		$desc = $this->input->get("desc");
+
+		$this->load->model('Model');
+
+		$idu=$this->session->userdata('idu');
+
+		$this->Model->ins($nom,$idu, $title, $desc, $prix);
+		redirect('index.php/home/index');
+	} 
+
 	public function yes()
 	{	
 		$p = $this->input->get("p");
