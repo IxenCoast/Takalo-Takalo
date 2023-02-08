@@ -38,6 +38,7 @@ class Log extends CI_Controller
 		$this->load->model('Model');
 		if($this->Model->checkLogin($mail,$pwd))
 		{
+			$this->session->set_userdata('mail', $mail);
 			redirect('index.php/home/index');
 		}
 		redirect('index.php/log/index');

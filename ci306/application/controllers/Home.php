@@ -7,10 +7,10 @@ class Home extends CI_Controller
     {
         parent::__construct();
        
-        // if(!$this->session->has_userdata('mail'))
-		// {
-		// 	// redirect('welcome/index');  
-		// }
+        if(!$this->session->has_userdata('mail'))
+		{
+			 redirect('log/index');  
+		}
 		$this->load->model('Model');
     }
     public function index()
