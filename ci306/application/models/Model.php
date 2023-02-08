@@ -11,7 +11,6 @@
             $result = $query->row_array(); 
 
             return $result;
-            // return $query;
         }
                 public function checkLogin($mail,$pass)
         {   
@@ -76,10 +75,6 @@
             }
             return $result;
         }
-        // public function checkLogin($mail,$pass){
-        //     $this -> db -> select('mail, mdp');
-        //     $this -> db -> from('utilisateur');
-        // }
 
         public function demander($p,$pf)
         {   
@@ -149,7 +144,7 @@
             }
             return $result;
         }
-        
+
         public function getIdAsk($id)
         {   
             $sql = "select idu from produit where idp in (SELECT demande.idp FROM demande join produit on demande.idpf = produit.idp where dta is null and dtr is null and produit.idu=2)";

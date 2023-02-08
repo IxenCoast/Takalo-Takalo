@@ -15,11 +15,10 @@ class Home extends CI_Controller
     }
     public function index()
 	{	
-		$id=1;
 		$data = array();
 		$data['header']="Home";
-		$data['pec'] = $this->Model->encours($id);
-		$data['listeProduit'] = $this->Model->mesObjets($id);
+		$data['pec'] = $this->Model->encours($this->session->userdata('idu'));
+		$data['listeProduit'] = $this->Model->mesObjets($this->session->userdata('idu'));
 		$data['mail'] = $this->session->userdata('mail');
 		$data['nom'] = $this->session->userdata('nom');
 		$data['idu'] = $this->session->userdata('idu');
@@ -29,25 +28,27 @@ class Home extends CI_Controller
 
 	public function demandes()
 	{	
-		$id=2;
 		$data = array();
 		$data['header']="Demandes";
-		$data['listeProduit'] = $this->Model->notif($id);
-		$data['idg'] = $this->Model->getIdAsk($id);
+		$data['listeProduit'] = $this->Model->notif($this->session->userdata('idu'));
+		$data['idg'] = $this->Model->getIdAsk($this->session->userdata('idu'));
 		$data['mail'] = $this->session->userdata('mail');
+		$data['nom'] = $this->session->userdata('nom');
+		$data['idu'] = $this->session->userdata('idu');
         $data['content'] = 'page/demandes';
 		$this->load->view('index',$data);
 	}
 
 	public function echange()
 	{	
-		$id=1;
 		$data = array();
 		$data['header']="home";
 		$data['idp']=$this->input->get('p');
 		$data['pec'] = $this->Model->enprepa();
-		$data['listeProduit'] = $this->Model->listeProduit($id);
+		$data['listeProduit'] = $this->Model->listeProduit($this->session->userdata('idu'));
 		$data['mail'] = $this->session->userdata('mail');
+		$data['nom'] = $this->session->userdata('nom');
+		$data['idu'] = $this->session->userdata('idu');
         $data['content'] = 'page/takalo';
 		$this->load->view('index',$data);
 	}

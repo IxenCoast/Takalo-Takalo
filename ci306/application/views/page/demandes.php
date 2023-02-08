@@ -4,19 +4,9 @@
 
   <div class="col-lg-3">
  
-  <h2 class="my-4">Bonjour <?php echo $id=2 ;?> ?, ca va ?</h2>
-
-
-    <!-- <div class="list-group">
-         list objets
-          <a href="#" class="list-group-item">1</a>
-          <a href="#" class="list-group-item">2</a>
-          <a href="#" class="list-group-item">3</a>
-         /list objets
-    </div> -->
+  <h2 class="my-4">Bonjour <?php echo $nom;?></h2>
 
   </div>
-  <!-- /.col-lg-3 -->
 
   <div class="col-lg-9">
 
@@ -75,12 +65,11 @@
           </div>
     <?php } ?>
     </div>
-    <!-- /.row -->
 
   </div>
-  <!-- /.col-lg-9 -->
+
 
 </div>
-<!-- /.row By <p class="card-text"><?php echo $produit['nom']?> -->
+
 
 </div>

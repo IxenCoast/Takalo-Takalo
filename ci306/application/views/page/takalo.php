@@ -4,17 +4,9 @@
 
   <div class="col-lg-3">
  
-    <h2 class="my-4">Quel article voulez vous echanger avec idp = <?php echo $idp; ?> <?php echo $mail;?> ?</h2>
-
-
-    <!-- <div class="list-group">
-          <a href="#" class="list-group-item">1</a>
-          <a href="#" class="list-group-item">2</a>
-          <a href="#" class="list-group-item">3</a>
-    </div> -->
+    <h2 class="my-4">Quel article voulez vous l'echanger <?php echo $nom;?> ?</h2>
 
   </div>
-  <!-- /.col-lg-3 -->
 
   <div class="col-lg-9">
 
