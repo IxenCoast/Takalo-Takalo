@@ -42,7 +42,7 @@
 
         public function listeProduitAdmin()
         {   
-            $sql = "SELECT * FROM produit JOIN";
+            $sql = "SELECT * FROM produit";
             $query = $this->db->query($sql);
             $result = array();
 
