@@ -4,15 +4,13 @@
 
   <div class="col-lg-3">
  
-  <h2 class="my-4">Bonjour <?php echo $mail;?> ?, ca va ?</h2>
+    <h2 class="my-4">Quel article voulez vous echanger avec idp = <?php echo $idp; ?> <?php echo $mail;?> ?</h2>
 
 
     <!-- <div class="list-group">
-         list objets
           <a href="#" class="list-group-item">1</a>
           <a href="#" class="list-group-item">2</a>
           <a href="#" class="list-group-item">3</a>
-         /list objets
     </div> -->
 
   </div>
@@ -46,7 +44,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <div class="title"><h1>Vos produits</h1></div>
+    <div class="title"><h1>Echanger Contre</h1></div>
     <br>
     <div class="row">
     <?php foreach ($listeProduit as $produit) {?>
@@ -61,7 +59,7 @@
                 <p class="card-text"><?php echo $produit['Description']?></p>
               </div>
               <div class="card-footer">
-              <a href="<?php echo base_url('index.php/home/echange');?>?p=<?php echo $produit['idp']?>" class="link-success">Echanger</a>
+              <a href="<?php echo base_url('index.php/home/echange');?>" class="link-success">Echanger</a>
               </div>
             </div>
           </div>

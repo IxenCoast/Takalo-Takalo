@@ -17,9 +17,20 @@ class Home extends CI_Controller
 	{	
 		$id=1;
 		$data = array();
-		$data['listeProduit'] = $this->Model->listeProduit($id);
+		$data['listeProduit'] = $this->Model->mesObjets($id);
 		$data['mail'] = $this->session->userdata('mail');
         $data['content'] = 'page/home';
+		$this->load->view('index',$data);
+	}
+
+	public function echange()
+	{	
+		$id=1;
+		$data = array();
+		$data['idp']=$this->input->get('p');
+		$data['listeProduit'] = $this->Model->listeProduit($id);
+		$data['mail'] = $this->session->userdata('mail');
+        $data['content'] = 'page/takalo';
 		$this->load->view('index',$data);
 	}
     
