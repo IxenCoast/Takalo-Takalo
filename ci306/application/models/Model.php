@@ -3,7 +3,17 @@
 
     class Model extends CI_Model 
     {
-        public function checkLogin($mail,$pass)
+        public function info($mail)
+        {   
+            $sql = "select * from utilisateur where mail = %s";
+            $sql = sprintf($sql, $this->db->escape($mail));
+            $query = $this->db->query($sql);
+            $result = $query->row_array(); 
+
+            return $result;
+            // return $query;
+        }
+                public function checkLogin($mail,$pass)
         {   
             $sql = "select * from utilisateur";
             $query = $this->db->query($sql);

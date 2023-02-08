@@ -21,6 +21,8 @@ class Home extends CI_Controller
 		$data['pec'] = $this->Model->encours($id);
 		$data['listeProduit'] = $this->Model->mesObjets($id);
 		$data['mail'] = $this->session->userdata('mail');
+		$data['nom'] = $this->session->userdata('nom');
+		$data['idu'] = $this->session->userdata('idu');
         $data['content'] = 'page/home';
 		$this->load->view('index',$data);
 	}

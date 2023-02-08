@@ -4,7 +4,7 @@
 
   <div class="col-lg-3">
  
-  <h2 class="my-4">Bonjour <?php echo $mail;?> ?, ca va ?</h2>
+  <h2 class="my-4">Bonjour <?php echo $nom;?> ?, ca va ?</h2>
 
 
     <!-- <div class="list-group">
