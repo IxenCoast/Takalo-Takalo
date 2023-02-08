@@ -199,3 +199,14 @@ INSERT INTO produit VALUES
     "MAZDA CX5",
     "Pour son second opus, le CX-5 emploie une méthode bien connue des constructeurs d'Outre-Rhin afin de préserver son succès : l'évolution douce"
 );
+
+create table Demande(
+    idd int AUTO_INCREMENT primary key,
+    idp int,
+    idpf int,
+    dte datetime,
+    dta datetime,
+    dtr datetime,
+    FOREIGN key (idp) REFERENCES produit(idp),
+    FOREIGN key (idpf) REFERENCES produit(idp)
+) 

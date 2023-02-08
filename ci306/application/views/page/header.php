@@ -7,15 +7,6 @@
     $contact = "";
     $demandes = "";
     
-    if(!isset($header))
-    {
-        $lien = "welcome/about";
-        $title = "Home";
-        $home = " active";
-    }
-    else
-    {
-        $lien = "about";
         $title = $header;
 
         if($header == "about"){
@@ -27,7 +18,6 @@
         }else if($header == "contact"){
           $contact = " active";
         }
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,15 +46,15 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item<?php echo $home?>">
-            <a class="nav-link" href="<?php echo $lien?>?content=home">Home</a>
+            <a class="nav-link" href="index">Home</a>
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item <?php echo $about?>">
-                <a class="nav-link" href="<?php echo $lien?>?content=about">About</a>
+                <a class="nav-link" href="">About</a>
           </li>
           <li class="nav-item<?php echo $demandes?>">
-            <a class="nav-link" href="<?php echo $lien?>?content=demandes">Demandes</a>
+            <a class="nav-link" href="demandes">Demandes</a>
           </li>
           <li class="nav-item<?php echo $contact?>">
             <a class="nav-link" href="<?php echo base_url('index.php/log/logout')?>">Log out</a>

@@ -49,7 +49,8 @@
     <div class="title"><h1>Vos produits</h1></div>
     <br>
     <div class="row">
-    <?php foreach ($listeProduit as $produit) {?>
+    <?php foreach ($listeProduit as $produit) { ?>
+    
     <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
@@ -61,7 +62,13 @@
                 <p class="card-text"><?php echo $produit['Description']?></p>
               </div>
               <div class="card-footer">
-              <a href="<?php echo base_url('index.php/home/echange');?>?p=<?php echo $produit['idp']?>" class="link-success">Echanger</a>
+                <?php 
+                $a="<a href=".base_url('index.php/home/echange')."?p=".$produit['idp']. " class=\"link-success\">Echanger</a>";
+                foreach ($pec as $p) { 
+                  if($produit['idp']==$p['idp']){
+                  $a="Demande en cours ...";
+                  }
+                } echo $a; ?>       
               </div>
             </div>
           </div>

@@ -4,13 +4,15 @@
 
   <div class="col-lg-3">
  
-    <h2 class="my-4">Quel article voulez vous echanger avec idp = <?php echo $idp; ?> <?php echo $mail;?> ?</h2>
+  <h2 class="my-4">Bonjour <?php echo $id=2 ;?> ?, ca va ?</h2>
 
 
     <!-- <div class="list-group">
+         list objets
           <a href="#" class="list-group-item">1</a>
           <a href="#" class="list-group-item">2</a>
           <a href="#" class="list-group-item">3</a>
+         /list objets
     </div> -->
 
   </div>
@@ -44,10 +46,11 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    <div class="title"><h1>Echanger Contre</h1></div>
+    <div class="title"><h1>Vos Demandes</h1></div>
     <br>
     <div class="row">
-    <?php foreach ($listeProduit as $produit) {?>
+    <?php foreach ($listeProduit as $produit) { ?>
+    
     <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
               <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
@@ -57,16 +60,11 @@
                 </h4>
                 <h5>$24.99</h5>
                 <p class="card-text"><?php echo $produit['Description']?></p>
-                <p class="card-text"><small>By <?php echo $produit['nom']?></small></p>
               </div>
               <div class="card-footer">
-                <?php 
-                $a="<a href=".base_url('index.php/demande/ask')."?p=".$idp. "&pf=".$produit['idp']. " class=\"link-success\">Demander a echanger</a>";
-                foreach ($pec as $p) { 
-                  if($produit['idp']==$p['idpf']){
-                  $a="Demande en cours ...";
-                  }
-                } echo $a; ?>       
+                <a class="link-success" href="<?php echo base_url('index.php/demande/yes'); ?>?p=<?php echo $produit['idd']; ?>&idu=<?php echo $produit['idu']; ?>&idf=<?php echo $id; ?>&idp=<?php echo $produit['idp']; ?>&idpf=<?php echo $produit['idpf']; ?>">Accepter</a>
+                ou 
+                <a class="link-success" href="<?php echo base_url('index.php/demande/no'); ?>?p=<?php echo $produit['idd']; ?>">Refuser</a>    
               </div>
             </div>
           </div>

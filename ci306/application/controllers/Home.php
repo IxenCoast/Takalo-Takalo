@@ -17,9 +17,22 @@ class Home extends CI_Controller
 	{	
 		$id=1;
 		$data = array();
+		$data['header']="Home";
+		$data['pec'] = $this->Model->encours($id);
 		$data['listeProduit'] = $this->Model->mesObjets($id);
 		$data['mail'] = $this->session->userdata('mail');
         $data['content'] = 'page/home';
+		$this->load->view('index',$data);
+	}
+
+	public function demandes()
+	{	
+		$id=2;
+		$data = array();
+		$data['header']="Demandes";
+		$data['listeProduit'] = $this->Model->notif($id);
+		$data['mail'] = $this->session->userdata('mail');
+        $data['content'] = 'page/demandes';
 		$this->load->view('index',$data);
 	}
 
@@ -27,7 +40,9 @@ class Home extends CI_Controller
 	{	
 		$id=1;
 		$data = array();
+		$data['header']="home";
 		$data['idp']=$this->input->get('p');
+		$data['pec'] = $this->Model->enprepa();
 		$data['listeProduit'] = $this->Model->listeProduit($id);
 		$data['mail'] = $this->session->userdata('mail');
         $data['content'] = 'page/takalo';
