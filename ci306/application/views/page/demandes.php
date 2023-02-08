@@ -49,7 +49,11 @@
     <div class="title"><h1>Vos Demandes</h1></div>
     <br>
     <div class="row">
-    <?php foreach ($listeProduit as $produit) { ?>
+    <?php 
+    $i=0; 
+    foreach ($listeProduit as $produit) {
+        
+    ?>
     
     <div class="col-lg-4 col-md-6 mb-4">
             <div class="card h-100">
@@ -62,7 +66,8 @@
                 <p class="card-text"><?php echo $produit['Description']?></p>
               </div>
               <div class="card-footer">
-                <a class="link-success" href="<?php echo base_url('index.php/demande/yes'); ?>?p=<?php echo $produit['idd']; ?>&idu=<?php echo $produit['idu']; ?>&idf=<?php echo $id; ?>&idp=<?php echo $produit['idp']; ?>&idpf=<?php echo $produit['idpf']; ?>">Accepter</a>
+                <a class="link-success" href="<?php echo base_url('index.php/demande/yes'); ?>?p=<?php echo $produit['idd']; ?>&idf=<?php echo $id; ?>&idp=<?php echo $produit['idp']; ?>&idpf=<?php echo $produit['idpf']; ?>&idu=<?php 
+                echo $t = $idg[$i]['idu']; $i++ ?>">Accepter</a>
                 ou 
                 <a class="link-success" href="<?php echo base_url('index.php/demande/no'); ?>?p=<?php echo $produit['idd']; ?>">Refuser</a>    
               </div>

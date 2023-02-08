@@ -33,6 +33,7 @@ class Home extends CI_Controller
 		$data = array();
 		$data['header']="Demandes";
 		$data['listeProduit'] = $this->Model->notif($id);
+		$data['idg'] = $this->Model->getIdAsk($id);
 		$data['mail'] = $this->session->userdata('mail');
         $data['content'] = 'page/demandes';
 		$this->load->view('index',$data);

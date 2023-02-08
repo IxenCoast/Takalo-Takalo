@@ -149,6 +149,22 @@
             }
             return $result;
         }
+        
+        public function getIdAsk($id)
+        {   
+            $sql = "select idu from produit where idp in (SELECT demande.idp FROM demande join produit on demande.idpf = produit.idp where dta is null and dtr is null and produit.idu=2)";
+            $sql = sprintf($sql, $this->db->escape($id));
+            $query = $this->db->query($sql);
+            $result = array();
+
+            foreach($query->result_array() as $row)
+            {
+                $result[] = $row;
+            }
+            return $result;
+        }
+
+       
 
     }
 ?>
